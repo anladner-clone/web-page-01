@@ -1,0 +1,80 @@
+---
+import LogoIcon from "../assets/icons/LogoIcon.svg";
+---
+
+<header class="header">
+    <a href="/" class="logo-container">
+        <p class="logo-text">Huerta</p>
+        <LogoIcon class="logo" width={24} height={24} />
+    </a>
+
+    <nav class="nav" id="navMenu">
+        <a class="nav__link" href="/">Home</a>
+        <a class="nav__link" href="/products">Products</a>
+        <a class="nav__link" href="/about-us">About Us</a>
+        <a class="nav__link" href="/contact">Contact</a>
+    </nav>
+</header>
+
+<style>
+    .header {
+        width: 100vw;
+        height: 6rem;
+        display: none;
+        justify-content: space-around;
+        align-items: center;
+        background-color: #66bb6a;
+        color: #f0f0f0;
+        text-shadow: 0 0 0.6rem #0009;
+        font-size: 1.3rem;
+
+        position: sticky;
+        top: 0;
+        z-index: 10;
+
+        user-select: none;
+    }
+
+    .logo-container {
+        display: flex;
+        gap: 0.3rem;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo-text {
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+
+    .logo {
+        color: #006b098e;
+    }
+
+    .nav {
+        display: flex;
+        gap: 2.5rem;
+    }
+
+    .nav__link {
+        position: relative;
+        text-decoration: none;
+        font-weight: bold;
+        color: #f0f0f0;
+        transition: scale .2s ease, top .2s ease, color .2s ease;
+        top: 0;
+    }
+
+    .nav__link:hover{
+        scale: 1.1;
+        top: -.1rem;
+        color: #e0e0e0;
+    }
+
+    @media (min-width: 768px) {
+        .header{
+            display: flex;
+        }
+    }
+</style>
